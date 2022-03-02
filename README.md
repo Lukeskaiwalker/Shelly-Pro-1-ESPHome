@@ -1,6 +1,7 @@
 # Shelly-Pro-1-ESPHome
 The internals of the Shelly Pro 1 and pinout
 
+<img src="/../main/docs/open.jpg" width="450px">
 
 There is a new Shelly on the market that now finally shipped. After buying and receiving it i immediately startet taking it apart. There where some things i noticed right at the beginning. 
 
@@ -8,9 +9,14 @@ There is a new Shelly on the market that now finally shipped. After buying and r
 It has two switch inputs but only one of them gets utilized, also there is one more LED at the top of the device for the second relay that the Pro 2 version has, that is not being used. You can see that they build one PCB for four device versions. 
 The PSU, the switch input board and the Relays board are all removable.
 
+<img src="/../main/docs/psu.jpg" width="450px">
+<img src="/../main/docs/button.jpg" width="450px"><img src="/../main/docs/relay.jpg" width="450px">
+
 
 ## Pinout
 After some further digging i found out there where using SMSC’s LAN8720A chip for the LAN communication. The ESP there are using is an ESP32 DOWDQ6, wich i am not sure why there are not using the same as in the Shelly Plus 1 (ESP32-U4WDH) or even the ESP32 S3. But maybe there where some supply chain issues, so that they needed to change out the ESP to an older model. Because of that they may change the ESP to a different one in the future and with that the pinout may change.
+
+<img src="/../main/docs/front.jpg" width="450px"> <img src="/../main/docs/back.jpg" width="450px">
 
 ESP32 DOWDQ6| SN74HC595B | LAN8720A | Component
 ------------|------------|----------|----------
@@ -47,3 +53,6 @@ QH        |nc
 
 
 ## Programming 
+For uploading your custom firmware, here is the pinout to the programming pins:
+
+<img src="/../main/docs/in.png" width="450px">  <img src="/../main/docs/out.png" width="450px">
